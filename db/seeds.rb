@@ -7,13 +7,13 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require 'faker'
 
-User.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('users')
-Event.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('events')
 Attendance.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('attendances')
+Event.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('events')
 
+User.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
 
 5.times do
     u = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, encrypted_password: "userpassword", description: Faker::Lorem.sentences )

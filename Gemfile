@@ -72,3 +72,4 @@ group :test do
 end
 gem 'letter_opener'
 gem 'faker'
+gem 'dotenv-rails'
